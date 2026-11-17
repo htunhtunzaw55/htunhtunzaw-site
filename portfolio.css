@@ -60,3 +60,5 @@ a:focus-visible,button:focus-visible { outline:2px solid var(--cyan); outline-of
  .study-section { padding:48px 0; }
 }
 .nav-links a.btn-primary, .nav-links a.btn-primary:hover { color:#05201D; }
+
+.project-feature + .project-feature { margin-top:28px; }
