@@ -45,3 +45,36 @@
  .question-grid { grid-template-columns:1fr; }
  .blog-art { padding:36px 20px; }
 }
+
+/* Compact, linked summary of the article's branding research. */
+.brand-overview { margin-top:38px; padding:32px; border:1px solid #28403c; border-radius:18px; background:radial-gradient(ellipse at top,#102a26,var(--panel) 75%); }
+.brand-overview figcaption h2 { font:500 clamp(25px,3vw,32px)/1.2 var(--font-head); letter-spacing:-.6px; }
+.brand-overview figcaption p { color:var(--muted); font-size:14px; margin-top:12px; }
+.brand-overview .eyebrow { margin-bottom:10px; }
+.brand-root { position:relative; width:max-content; max-width:100%; margin:28px auto 38px; padding:12px 32px; border:1px solid var(--cyan); border-radius:12px; color:var(--cyan); text-align:center; font:500 28px/1.3 var(--font-head); }
+.brand-root span { display:block; font:400 12px/1.6 var(--font-body); color:#bdd5d0; margin-top:3px; }
+.brand-root::after { content:''; position:absolute; top:100%; left:50%; height:20px; width:1px; background:#3b7268; }
+.brand-map-branches { position:relative; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+.brand-map-branches::before { content:''; position:absolute; top:-19px; left:calc((100% - 48px)/8); right:calc((100% - 48px)/8); height:1px; background:#3b7268; }
+.brand-map-node { position:relative; display:block; padding:22px 18px 18px; border:1px solid #31524c; border-radius:12px; background:#111e1b; transition:border-color .2s,background .2s; }
+.brand-map-node::before { content:''; position:absolute; bottom:100%; left:50%; width:1px; height:19px; background:#3b7268; }
+.brand-map-node:hover { border-color:var(--cyan); background:#16302a; }
+.brand-icon { width:26px; height:26px; flex:none; color:var(--cyan); }
+.brand-map-node h3 { font:500 21px/1.3 var(--font-head); margin:12px 0 8px; }
+.brand-map-node strong { display:block; font-size:13px; font-weight:500; }
+.brand-map-node span { display:block; font-size:12px; color:#b0c5c0; margin-top:5px; }
+.brand-map-node small { display:block; color:var(--cyan); font-size:12px; margin-top:18px; }
+.article-body h2 .brand-icon { display:block; margin-bottom:14px; }
+@media(max-width:860px) {
+ .brand-overview { padding:24px; }
+ .brand-map-branches { grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+ .brand-map-branches::before,.brand-map-node::before { display:none; }
+ .brand-root { margin-bottom:24px; }
+ .brand-root::after { height:25px; }
+}
+@media(max-width:480px) {
+ .brand-map-branches { grid-template-columns:1fr; padding-left:18px; border-left:1px solid #3b7268; }
+ .brand-root { margin-left:0; font-size:24px; }
+ .brand-root::after { left:-1px; }
+ .brand-map-node::before { display:block; left:-19px; top:50%; width:18px; height:1px; }
+}
